@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Quicksand", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #006a60;
+  --color-primary-fixed: #89f5e4;
+
+  --color-sidebar: #1c2924;
+  --color-app: #f8f9f8;
+  --color-surface: #ecfdf6;
+  --color-card: #ffffff;
+  --color-on-surface: #101e1a;
+  --color-muted: #64746d;
+  --color-border: #e5ebe7;
+
+  --color-celadon-light: #e0f4ed;
+  --color-celadon-mid: #b5e4d4;
+  --color-celadon-deep: #176b5e;
+
+  --color-sage-light: #e7f0e8;
+  --color-tertiary: #a66a16;
+  --color-amber-light: #fff2d8;
+
+  --color-coral: #d45f59;
+  --color-coral-light: #fff0ed;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: var(--color-app);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
